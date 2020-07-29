@@ -5,10 +5,9 @@ export const Title = styled.h3`
   font-weight: normal;
   font-size: 35px;
   line-height: 1;
-  margin-bottom: 16px;
+  margin-bottom: 15px;
   display: inline-block;
-  padding: 20px;
-  background: red;
+  padding: 0;
   line-height: 1;
   border-radius: 4px;
 
@@ -44,6 +43,7 @@ export const VideoCardList = styled.ul`
   
   li {
     margin-right: 16px;
+    position: relative;
   }
 `;
 

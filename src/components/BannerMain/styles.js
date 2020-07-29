@@ -25,7 +25,7 @@ ContentAreaContainer.Item = styled.div`
 `;
 
 ContentAreaContainer.Category = styled.h1`
-  font-family: Roboto;
+  font-family: Montserrat;
   font-style: normal;
   font-weight: normal;
   font-size: 60px;
@@ -46,6 +46,9 @@ ContentAreaContainer.Category = styled.h1`
 `;
 
 ContentAreaContainer.Description = styled.p`
+  font-size: 30px;
+  font-weight: 600;
+
   @media (max-width: 800px) {
     display: none;
   }
@@ -53,8 +56,8 @@ ContentAreaContainer.Description = styled.p`
 
 ContentAreaContainer.Title = styled.h2`
   font-style: normal;
-  font-weight: 300;
-  font-size: 40px;
+  font-weight: 800;
+  font-size: 100px;
   line-height: 1;
   margin-top: 0;
   margin-bottom: 32px;
@@ -101,7 +104,7 @@ export const BannerMainContainer = styled.section`
 `;
 
 export const WatchButton = styled.button`
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   box-sizing: border-box;
   cursor: pointer;
   padding: 16px 24px;
