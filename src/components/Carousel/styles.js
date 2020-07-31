@@ -12,8 +12,8 @@ export const Title = styled.h3`
   border-radius: 4px;
 
   @media (max-width: 800px) {
-    font-size: 18px;
-    padding: 10px;
+    font-size: 25px;
+    margin-bottom: 0;
   }
 `;
 
@@ -44,6 +44,17 @@ export const VideoCardList = styled.ul`
   li {
     margin-right: 16px;
     position: relative;
+
+    &:hover,
+    &:focus {
+      a {
+        opacity: .25;
+      }
+
+      button {
+        opacity: .8;
+      }
+    }
   }
 `;
 

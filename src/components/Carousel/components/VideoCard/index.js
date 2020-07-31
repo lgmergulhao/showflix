@@ -1,5 +1,6 @@
 import React from 'react';
-import { VideoCardContainer, VideoCardContainerTitle } from './styles';
+import { VideoCardContainer, VideoCardContainerTitle, WatchButton } from './styles';
+import { FiPlayCircle } from 'react-icons/fi';
 
 function getYouTubeId(youtubeURL) {
   return youtubeURL
@@ -25,6 +26,10 @@ function VideoCard({ videoTitle, videoURL, categoryColor }) {
       >
         {videoTitle}
       </VideoCardContainerTitle>
+
+      <WatchButton>
+        <FiPlayCircle />
+      </WatchButton>
     </>
   );
 }

@@ -10,7 +10,8 @@
       "videos": [
         {
           "titulo": "1917",
-          "url": "https://www.youtube.com/watch?v=gZjQROMAh_s"
+          "url": "https://www.youtube.com/watch?v=gZjQROMAh_s",
+          "descricao": "Na Primeira Guerra Mundial, dois soldados britânicos recebem ordens aparentemente impossíveis de cumprir."
         },
         {
           "titulo": "Matrix",

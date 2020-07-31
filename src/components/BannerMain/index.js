@@ -1,6 +1,7 @@
 import React from 'react';
 import VideoIframeResponsive from './components/VideoIframeResponsive';
 import { BannerMainContainer, ContentAreaContainer, WatchButton } from './styles';
+import { FiPlayCircle } from 'react-icons/fi';
 
 function getYouTubeId(youtubeURL) {
   return youtubeURL
@@ -21,7 +22,7 @@ export default function BannerMain({
   return (
     <BannerMainContainer backgroundImage={bgUrl}>
       <ContentAreaContainer>
-        <ContentAreaContainer.Item>
+        <ContentAreaContainer.Text>
           <ContentAreaContainer.Title>
             {videoTitle}
           </ContentAreaContainer.Title>
@@ -29,16 +30,26 @@ export default function BannerMain({
           <ContentAreaContainer.Description>
             {videoDescription}
           </ContentAreaContainer.Description>
-        </ContentAreaContainer.Item>
 
-        <ContentAreaContainer.Item>
+          <ContentAreaContainer.Video>
+            <VideoIframeResponsive
+              youtubeID={youTubeID}
+            />
+
+            <WatchButton>
+              <FiPlayCircle />
+            </WatchButton>
+          </ContentAreaContainer.Video>
+        </ContentAreaContainer.Text>
+
+        {/* <ContentAreaContainer.Video>
           <VideoIframeResponsive
             youtubeID={youTubeID}
           />
           <WatchButton>
             Assistir
           </WatchButton>
-        </ContentAreaContainer.Item>
+        </ContentAreaContainer.Video> */}
       </ContentAreaContainer>
     </BannerMainContainer>
   );

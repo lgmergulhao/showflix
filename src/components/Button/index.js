@@ -15,79 +15,93 @@ const Button = styled.button`
   vertical-align: middle;
   transition: color 0.25s;
 
-  &::before,
-  &::after {
-    box-sizing: inherit;
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-  }
-
-  &::before,
-  &::after {
-    border: 2px solid transparent;
-    width: 0;
-    height: 0;
-  }
-
-  &::before {
-    top: 0;
+  @media (max-width: 800px) {
+    position: fixed;
     left: 0;
-  }
-
-  &::after {
-    bottom: 0;
     right: 0;
+    bottom: 0;
+    background: var(--primary);
+    border-radius: 0;
+    border: 0;
+    text-align: center;
+    box-shadow: none;
   }
 
-  &:hover {
-    color: var(--primary);
-  }
+  @media (min-width: 800px) {
+    &::before,
+    &::after {
+      box-sizing: inherit;
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+    }
 
-  &:hover::before,
-  &:hover::after {
-    width: 100%;
-    height: 100%;
-  }
+    &::before,
+    &::after {
+      border: 2px solid transparent;
+      width: 0;
+      height: 0;
+    }
 
-  &:hover::before {
-    border-top-color: var(--primary);
-    border-right-color: var(--primary);
-    transition:
-      width 0.25s ease-out,
-      height 0.25s ease-out 0.25s;
-  }
+    &::before {
+      top: 0;
+      left: 0;
+    }
 
-  &:hover::after {
-    border-bottom-color: var(--primary);
-    border-left-color: var(--primary);
-    transition:
-      border-color 0s ease-out 0.5s,
-      width 0.25s ease-out 0.5s,
-      height 0.25s ease-out 0.75s;
-  }
+    &::after {
+      bottom: 0;
+      right: 0;
+    }
 
-  &:hover {
-    color: var(--primary);
-  }
+    &:hover {
+      color: var(--primary);
+    }
 
-  &::after {
-    top: 0;
-    left: 0;
-  }
+    &:hover::before,
+    &:hover::after {
+      width: 100%;
+      height: 100%;
+    }
 
-  &:hover::before {
-    border-top-color: var(--primary);
-    border-right-color: var(--primary);
-  }
+    &:hover::before {
+      border-top-color: var(--primary);
+      border-right-color: var(--primary);
+      transition:
+        width 0.25s ease-out,
+        height 0.25s ease-out 0.25s;
+    }
 
-  &:hover::after {
-    border-bottom-color: var(--primary);
-    border-left-color: var(--primary);
-    transition:
-      height 0.25s ease-out,
-      width 0.25s ease-out 0.25s;
+    &:hover::after {
+      border-bottom-color: var(--primary);
+      border-left-color: var(--primary);
+      transition:
+        border-color 0s ease-out 0.5s,
+        width 0.25s ease-out 0.5s,
+        height 0.25s ease-out 0.75s;
+    }
+
+    &:hover {
+      color: var(--primary);
+    }
+
+    &::after {
+      top: 0;
+      left: 0;
+    }
+
+    &:hover::before {
+      border-top-color: var(--primary);
+      border-right-color: var(--primary);
+    }
+
+    &:hover::after {
+      border-bottom-color: var(--primary);
+      border-left-color: var(--primary);
+      transition:
+        height 0.25s ease-out,
+        width 0.25s ease-out 0.25s;
+    }
   }
 `;
 

@@ -5,6 +5,7 @@ export const ContentAreaContainer = styled.section`
   margin-right: 5%;
   height: 100%;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
   position: relative;
@@ -15,12 +16,24 @@ export const ContentAreaContainer = styled.section`
   }
 `;
 
-ContentAreaContainer.Item = styled.div`
-  width: 50%;
-  display: inline-block;
-  margin-bottom: 50px;
+ContentAreaContainer.Text = styled.div`
+  min-width: 100%;
+  display: block;
+  margin-bottom: 0;
+
   @media (max-width: 800px) {
     width: 100%;
+  }
+`;
+
+ContentAreaContainer.Video = styled.div`
+  max-width: 600px;
+  display: block;
+  margin-top: 30px;
+
+  @media (max-width: 800px) {
+    width: 100%;
+    max-width: none;
   }
 `;
 
@@ -46,11 +59,14 @@ ContentAreaContainer.Category = styled.h1`
 `;
 
 ContentAreaContainer.Description = styled.p`
-  font-size: 30px;
+  width: 50%;
+  font-size: 20px;
   font-weight: 600;
 
   @media (max-width: 800px) {
-    display: none;
+    width: 100%;
+    font-size: 16px;
+    text-align: center;
   }
 `;
 
@@ -60,10 +76,9 @@ ContentAreaContainer.Title = styled.h2`
   font-size: 100px;
   line-height: 1;
   margin-top: 0;
-  margin-bottom: 32px;
 
   @media (max-width: 800px) {
-    font-size: 32px;
+    font-size: 50px;
     text-align: center;
   }
 `;
@@ -104,24 +119,16 @@ export const BannerMainContainer = styled.section`
 `;
 
 export const WatchButton = styled.button`
-  font-family: 'Montserrat', sans-serif;
-  box-sizing: border-box;
   cursor: pointer;
-  padding: 16px 24px;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 16px;
+  font-size: 100px;
   outline: none;
-  border-radius: 5px;
-  text-decoration: none;
-  display: inline-block;
-  border: 1px solid transparent;
-  color: var(--black);
-  background: var(--white);
-  border-color: var(--black);
-  transition: opacity .3s;
+  border: 0 solid transparent;
+  color: var(--white);
+  background: transparent;
+  margin: 30px auto 0;
+  opacity: .8;
   display: none;
-  margin: 0 auto;
+
   @media (max-width: 800px) {
     display: block;
   }
